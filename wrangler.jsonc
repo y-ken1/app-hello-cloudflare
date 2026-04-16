@@ -1,7 +1,16 @@
-{
-  "name": "app-hello-cloudflare",
-  "compatibility_date": "2026-04-15",
-  "assets": {
-    "directory": "./dist"
+ {
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "app-hello-cloudflare",
+    "compatibility_date": "2026-04-15",
+    "observability": {
+      "enabled": true
+    },
+    "assets": {
+      "directory": "./dist",
+      "not_found_handling": "single-page-application"
+    },
+    "compatibility_flags": [
+      "nodejs_compat"
+    ]
   }
-}
+
